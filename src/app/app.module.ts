@@ -18,6 +18,7 @@ import { RequerimentoUsuarioComponent } from './component/requerimento-usuario/r
 import { RequerimentoParamedicoComponent } from './component/requerimento-paramedico/requerimento-paramedico.component';
 import { InicioHospitalComponent } from './component/inicio-hospital/inicio-hospital.component';
 import { RegistroHospitalComponent } from './component/registro-hospital/registro-hospital.component'; 
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -32,14 +33,14 @@ import { RegistroHospitalComponent } from './component/registro-hospital/registr
     RequerimentoParamedicoComponent,
     InicioHospitalComponent,
     RegistroHospitalComponent,
-
+     HospitalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase), // Inicializa Firebase
     AngularFireAuthModule, // Módulo para autenticación
-    AngularFirestoreModule, // Módulo para Firestore
+    AngularFirestoreModule,
     FormsModule // <--- Asegúrate de agregar FormsModule aquí
   ],
   providers: [],
