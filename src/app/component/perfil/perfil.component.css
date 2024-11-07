@@ -1,0 +1,131 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Estilo del header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  nav .navbar h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  /* Estilo del menú */
+  nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav .menu button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  nav .menu button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Contenedor del perfil */
+  .profile-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-container h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de la información del perfil */
+  .profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Imagen de perfil */
+  .profile-info .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Información del perfil */
+  .profile-info .info {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .profile-info .info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 5px 0;
+  }
+  
+  .profile-info .info p strong {
+    color: #007BFF;
+  }
+  
+  /* Botón de editar */
+  .edit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .edit-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .profile-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-info .profile-image {
+      margin-bottom: 15px;
+    }
+  
+    .profile-info .info {
+      margin-left: 0;
+    }
+  
+    .profile-container {
+      width: 90%;
+      padding: 15px;
+    }
+  }
+  
