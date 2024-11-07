@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { BienvenidaComponent } from './component/bienvenida/bienvenida.component';
 import { RegisterComponent } from './component/register/register.component';
 import { HospitalesComponent } from './component/hospitales/hospitales.component';
-import { PerfilComponent } from './component/perfil/perfil.component'; // <--- Importa FormsModule aquí
+import { PerfilComponent } from './component/perfil/perfil.component';
+import { HospitalComponent } from './component/hospital/hospital.component'; 
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { PerfilComponent } from './component/perfil/perfil.component'; // <--- I
     BienvenidaComponent,
     RegisterComponent,
     HospitalesComponent,
-    PerfilComponent
+    PerfilComponent,
+    HospitalComponent,
+
   ],
   imports: [
     BrowserModule,
