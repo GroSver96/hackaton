@@ -1,7 +1,47 @@
-<div>
-    <h1>Hospitales Disponibles</h1>
-    <!-- Aquí puedes agregar la lista o detalles de los hospitales -->
-    <p>Listado de hospitales y detalles relevantes.</p>
-    <button (click)="volver()">Volver a la Bienvenida</button>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospitales</title>
+  <link rel="stylesheet" href="hospitales.component.css">
+</head>
+<body>
+  <!-- Encabezado con Menú de Navegación -->
+  <header>
+    <nav class="navbar">
+      <h1>Red de Hospitales</h1>
+      <ul class="menu">
+        <button (click)="volver()">inicio</button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
+  <div class="container">
+    <div class="hospital-card">
+      <img src="https://abi.bo/images/Noticias/Sociedad/jun-22/BANCO_DE_SANGRE_OK.jpg" alt="Hospital 1">
+      <div class="hospital-info">
+        <h3>Banco de Sangre <br> "El Alto"</h3>
+        <p>Conoce más sobre nuestro hospital y servicios.</p>
+        <div class="buttons">
+          <button onclick="window.location.href='info-hospital1.html'">Saber Más</button>
+          <button onclick="window.location.href='https://www.google.com/maps/place/Banco+De+Sangre+El+Alto/@-16.5253477,-68.1518176,18z/data=!3m1!4b1!4m6!3m5!1s0x915edf7b21bc3bef:0x1009c91196d8310c!8m2!3d-16.5253477!4d-68.1518176!16s%2Fg%2F11c575xkm9?hl=es-419&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D'">Ubicación</button>
+        </div>
+      </div>
+    </div>
+    <div class="hospital-card">
+      <img src="https://th.bing.com/th/id/R.e9a3b6dd083d2ed8641376a2a95da4b6?rik=XgZcrG1TlKlrUQ&riu=http%3a%2f%2fbp1.blogger.com%2f_3TJ0hsS6Rio%2fSEN58LD4DkI%2fAAAAAAAAAAM%2fC79pSSNkwNQ%2fw1200-h630-p-k-no-nu%2fDSC01053.jpg&ehk=%2fhZ6YxTZQ6T9Si5HwzZrGwhJ2TY4APlsiHZ99hiDq5I%3d&risl=&pid=ImgRaw&r=0" alt="Hospital 2">
+      <div class="hospital-info">
+        <h3>Hospital Holandes <br>"Ciudad Satelite"</h3>
+        <p>Obtén información sobre nuestros servicios médicos.</p>
+        <div class="buttons">
+          <button onclick="window.location.href='info-hospital2.html'">Saber Más</button>
+          <button onclick="window.location.href='https://maps.google.com/?q=Hospital+del+Sur'">Ubicación</button>
+        </div>
+      </div>
+    </div>
+    <!-- Puedes agregar más hospitales aquí siguiendo el mismo formato -->
   </div>
-  
+</body>
+</html>

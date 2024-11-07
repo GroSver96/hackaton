@@ -11,9 +11,8 @@ import { LoginComponent }from './component/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { BienvenidaComponent } from './component/bienvenida/bienvenida.component';
 import { RegisterComponent } from './component/register/register.component';
-import { HospitalesComponent } from './component/hospitales/hospitales.component';
-import { PerfilComponent } from './component/perfil/perfil.component';
-import { HospitalComponent } from './component/hospital/hospital.component'; 
+import { HospitalComponent } from './component/hospital/hospital.component'; // <--- Importa FormsModule aquí
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -21,17 +20,14 @@ import { HospitalComponent } from './component/hospital/hospital.component';
     LoginComponent,
     BienvenidaComponent,
     RegisterComponent,
-    HospitalesComponent,
-    PerfilComponent,
-    HospitalComponent,
-
+    HospitalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase), // Inicializa Firebase
     AngularFireAuthModule, // Módulo para autenticación
-    AngularFirestoreModule, // Módulo para Firestore
+    AngularFirestoreModule,
     FormsModule // <--- Asegúrate de agregar FormsModule aquí
   ],
   providers: [],

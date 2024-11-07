@@ -1,0 +1,110 @@
+/* Encabezado */
+header {
+    background-color: #333;
+    padding: 15px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .navbar h1 {
+    font-size: 1.5em;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li {
+    display: inline;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #007bff;
+  }
+  
+  /* Estilos de los Hospitales */
+  .container {
+    max-width: 1200px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .hospital-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .hospital-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .hospital-info {
+    padding: 15px;
+  }
+  
+  .hospital-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .hospital-info p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:first-child {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  button:first-child:hover {
+    background-color: #0056b3;
+  }
+  
+  button:last-child {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  button:last-child:hover {
+    background-color: #1c7a32;
+  }
+  
