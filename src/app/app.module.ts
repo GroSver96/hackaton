@@ -10,14 +10,18 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { LoginComponent }from './component/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { BienvenidaComponent } from './component/bienvenida/bienvenida.component';
-import { RegisterComponent } from './component/register/register.component'; // <--- Importa FormsModule aquí
+import { RegisterComponent } from './component/register/register.component';
+import { HospitalesComponent } from './component/hospitales/hospitales.component';
+import { PerfilComponent } from './component/perfil/perfil.component'; // <--- Importa FormsModule aquí
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BienvenidaComponent,
-    RegisterComponent
+    RegisterComponent,
+    HospitalesComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
