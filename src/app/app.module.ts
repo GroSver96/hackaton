@@ -3,16 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { LoginComponent }from './component/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { BienvenidaComponent } from './component/bienvenida/bienvenida.component';
+import { RegisterComponent } from './component/register/register.component'; // <--- Importa FormsModule aquí
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    BienvenidaComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase), // Inicializa Firebase
+    AngularFireAuthModule, // Módulo para autenticación
+    AngularFirestoreModule, // Módulo para Firestore
+    FormsModule // <--- Asegúrate de agregar FormsModule aquí
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
