@@ -13,7 +13,11 @@ import { BienvenidaComponent } from './component/bienvenida/bienvenida.component
 import { RegisterComponent } from './component/register/register.component';
 import { HospitalesComponent } from './component/hospitales/hospitales.component';
 import { PerfilComponent } from './component/perfil/perfil.component';
-import { HospitalComponent } from './component/hospital/hospital.component'; 
+import { HospitalComponent } from './component/hospital/hospital.component';
+import { RequerimentoUsuarioComponent } from './component/requerimento-usuario/requerimento-usuario.component';
+import { RequerimentoParamedicoComponent } from './component/requerimento-paramedico/requerimento-paramedico.component';
+import { InicioHospitalComponent } from './component/inicio-hospital/inicio-hospital.component';
+import { RegistroHospitalComponent } from './component/registro-hospital/registro-hospital.component'; 
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { HospitalComponent } from './component/hospital/hospital.component';
     HospitalesComponent,
     PerfilComponent,
     HospitalComponent,
+    RequerimentoUsuarioComponent,
+    RequerimentoParamedicoComponent,
+    InicioHospitalComponent,
+    RegistroHospitalComponent,
 
   ],
   imports: [
