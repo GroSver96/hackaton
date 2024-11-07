@@ -1,1 +1,40 @@
-<p>registro-hospital works!</p>
+<div class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <h2>Registrar Hospital</h2>
+      <form (ngSubmit)="onSubmit()">
+        <label for="name">Nombre del Hospital:</label>
+        <input type="text" id="name" [(ngModel)]="hospital.name" name="name" required />
+  
+        <label for="address">Dirección:</label>
+        <input type="text" id="address" [(ngModel)]="hospital.address" name="address" required />
+  
+        <label for="phoneNumbers">Números de referencia:</label>
+        <input type="text" id="phoneNumbers" [(ngModel)]="hospital.phoneNumbers" name="phoneNumbers" required />
+  
+        <label for="managerName">Nombre del Encargado:</label>
+        <input type="text" id="managerName" [(ngModel)]="hospital.managerName" name="managerName" required />
+  
+        <label for="operatingHours">Horarios de Atención:</label>
+        <input type="text" id="operatingHours" [(ngModel)]="hospital.operatingHours" name="operatingHours" readonly />
+  
+        <label for="level">Nivel:</label>
+        <input type="text" id="level" [(ngModel)]="hospital.level" name="level" required />
+  
+        <label for="insuranceType">Tipo de Seguro:</label>
+        <input type="text" id="insuranceType" [(ngModel)]="hospital.insuranceType" name="insuranceType" required />
+  
+        <label for="isPrivate">¿Es privado?</label>
+        <select id="isPrivate" [(ngModel)]="hospital.isPrivate" name="isPrivate" required>
+          <option [value]="false">Público</option>
+          <option [value]="true">Privado</option>
+        </select>
+  
+        <button type="submit">Registrar Hospital</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Este es un botón para abrir el modal -->
+  <button (click)="openModal()">Registrar Nuevo Hospital</button>
+  

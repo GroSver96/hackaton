@@ -16,7 +16,8 @@ export class RegisterComponent {
     email: '',
     password: '',
     bloodType: '',
-    phone: ''
+    phone: '',
+    role: 'usuario'
   };
 
   constructor(private authService: AuthService,private router: Router) {}
@@ -30,13 +31,12 @@ export class RegisterComponent {
   }
 
   onSubmit() {
-    // Llamamos al servicio para registrar el usuario
     this.authService.register(this.user.email, this.user.password, this.user)
       .subscribe(
         () => {
           console.log('Usuario registrado exitosamente');
           this.router.navigate(['/bienvenida']); 
-          this.closeModal();  // Cierra el modal después de registrar al usuario
+          this.closeModal();
         },
         (error) => {
           console.error('Error al registrar al usuario:', error);

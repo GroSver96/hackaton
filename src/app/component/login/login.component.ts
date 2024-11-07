@@ -16,12 +16,19 @@ export class LoginComponent {
 
   onLogin() {
     this.authService.login(this.email, this.password)
-      .then(() => {
-        // Redirige al usuario a la página principal o dashboard después del login exitoso
-        this.router.navigate(['/bienvenida']);  // Cambia '/dashboard' por la ruta que desees
+      .then((userCredential) => {
+        const uid = userCredential.user?.uid;
+        if (uid) {
+          this.authService.getUserRole(uid).subscribe(role => {
+            if (role === 'administrador') {
+              this.router.navigate(['/inicio-hospital']); // Redirigir a inicio-hospital
+            } else {
+              this.router.navigate(['/bienvenida']); // Redirigir a bienvenida
+            }
+          });
+        }
       })
       .catch(error => {
-        // Muestra el mensaje de error en caso de fallo en la autenticación
         this.errorMessage = 'Correo o contraseña incorrectos. Por favor, intenta de nuevo.';
         console.error('Error de autenticación:', error);
       });
