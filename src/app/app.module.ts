@@ -33,7 +33,7 @@ import { from } from 'rxjs';
     RequerimentoParamedicoComponent,
     InicioHospitalComponent,
     RegistroHospitalComponent,
-     HospitalComponent
+    HospitalComponent,
   ],
   imports: [
     BrowserModule,
