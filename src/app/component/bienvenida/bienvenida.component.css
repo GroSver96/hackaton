@@ -1,85 +1,69 @@
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
+/* Contenedor principal */
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    background-color: #003366; /* Fondo en azul oscuro */
-    color: white;
-    margin: 0;
-}
-
-.bienvenida-container {
-    width: 90%;
-    max-width: 600px;
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: #003366;
-}
-
-/* Título principal */
-.bienvenida-container h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #0066cc; /* Azul claro */
-}
-
-/* Descripción */
-.bienvenida-container p {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Botón de cerrar sesión */
-.logout-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #ff6600;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.logout-button:hover {
-    background-color: #e65c00;
-}
-
-/* Grupo de botones de acción */
-.button-group {
-    display: flex;
-    gap: 15px;
     justify-content: center;
-    margin-top: 20px;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
 }
 
-.action-button {
-    background-color: #0066cc; /* Azul claro */
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    font-weight: bold;
+/* Botón de Logout */
+button:first-of-type {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    align-content: center;
 }
 
-.action-button:hover {
-    background-color: #004c99; /* Azul más oscuro */
+button:first-of-type:hover {
+    background-color: #fff;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* Título y subtítulo */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 0 0 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Botones de acción */
+button[routerLink] {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button[routerLink]:hover {
+    background-color: #fff;
+    color: #1e90ff;
+    border-color: #1e90ff;
 }
