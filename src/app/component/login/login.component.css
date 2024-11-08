@@ -23,6 +23,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+<<<<<<< HEAD
     color: #003366;
 }
 
@@ -35,6 +36,17 @@ h2 {
 }
 
 /* Estilo de las etiquetas */
+=======
+}
+
+/* Título */
+h2 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+/* Etiquetas y campos de entrada */
+>>>>>>> rama_pruebas
 label {
     font-weight: bold;
     color: #0066cc;
@@ -82,7 +94,7 @@ button[type="submit"]:hover {
     background-color: #cc5200;
 }
 
-/* Botón de Registrar Nuevo */
+/* Botón de Registrar Nuevo
 .btn-register {
     background-color: #0066cc;
     color: white;
@@ -93,11 +105,17 @@ button[type="submit"]:hover {
     font-weight: bold;
     width: 100%;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 .btn-register:hover {
+<<<<<<< HEAD
     background-color: #005bb5;
 }
+=======
+    background-color: #cc5500;
+} */
+>>>>>>> rama_pruebas
 
 /* Mensaje de error */
 .error {
@@ -105,4 +123,16 @@ button[type="submit"]:hover {
     font-size: 0.9em;
     margin-top: 10px;
     text-align: center;
+}
+
+/* Contenedor de app-register */
+.register-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    color: #003366;
+    font-weight: bold;
 }
