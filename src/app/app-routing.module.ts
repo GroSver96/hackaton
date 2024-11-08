@@ -7,6 +7,7 @@ import { PerfilComponent } from './component/perfil/perfil.component';
 import { RequerimentoUsuarioComponent } from './component/requerimento-usuario/requerimento-usuario.component';
 import { InicioHospitalComponent } from './component/inicio-hospital/inicio-hospital.component';
 import { RegistroHospitalComponent } from './component/registro-hospital/registro-hospital.component';
+import { RequerimentoParamedicoComponent } from './component/requerimento-paramedico/requerimento-paramedico.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent},
   { path: 'requerimento-usuario', component: RequerimentoUsuarioComponent},
   { path: 'inicio-hospital', component: InicioHospitalComponent},
-  { path: 'registro-hospital',component: RegistroHospitalComponent}
+  { path: 'registro-hospital',component: RegistroHospitalComponent},
+  { path: 'requerimento-paramedico',component: RequerimentoParamedicoComponent}
+
 ];
 
 @NgModule({

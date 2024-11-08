@@ -1,2 +1,11 @@
-
+<!-- perfil.component.html -->
+<div class="profile-container" *ngIf="userData">
+    <h2>Perfil del Usuario</h2>
+    <p><strong>Nombre:</strong> {{ userData.firstName }} {{ userData.lastName }}</p>
+    <p><strong>Correo Electrónico:</strong> {{ userData.email }}</p>
+    <p><strong>Dirección:</strong> {{ userData.address }}</p>
+    <p><strong>Teléfono:</strong> {{ userData.phone }}</p>
+    <p><strong>Tipo de Sangre:</strong> {{ userData.bloodType }}</p>
+    <p><strong>Rol:</strong> {{ userData.role }}</p>
+  </div>
   

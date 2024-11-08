@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+// perfil.component.ts
+import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../../service/firebase.service';
 
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
-  styleUrl: './perfil.component.css'
+  styleUrls: ['./perfil.component.css']
 })
-export class PerfilComponent {
-  constructor(private router: Router) {}
-  volver(){
-  this.router.navigate(['/bienvenida']);
-}
-}
+export class PerfilComponent implements OnInit {
+  userData: any;
 
+  constructor(private firebaseService: FirebaseService) {}
 
+  ngOnInit(): void {
+    this.firebaseService.getCurrentUserProfile().subscribe((data) => {
+      this.userData = data;
+    });
+  }
+}

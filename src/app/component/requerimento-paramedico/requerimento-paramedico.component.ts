@@ -1,48 +1,43 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../../service/auth.service';
-import { Router } from '@angular/router';
+// requerimento-paramedico.component.ts
+import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../../service/firebase.service';
 
 @Component({
   selector: 'app-requerimento-paramedico',
   templateUrl: './requerimento-paramedico.component.html',
-  styleUrl: './requerimento-paramedico.component.css'
+  styleUrls: ['./requerimento-paramedico.component.css']
 })
-export class RequerimentoParamedicoComponent {
-  isModalOpen = false;
+export class RequerimentoParamedicoComponent implements OnInit {
+  ambulanceRequests: any[] = [];
 
-  user = {
-    firstName: '',
-    lastName: '',
-    address: '',
-    email: '',
-    password: '',
-    bloodType: '',
-    phone: '',
-    role: 'usuario'
-  };
+  constructor(private firebaseService: FirebaseService) {}
 
-  constructor(private authService: AuthService,private router: Router) {}
-
-  openModal() {
-    this.isModalOpen = true;
+  ngOnInit(): void {
+    this.firebaseService.getAmbulanceRequests().subscribe((data) => {
+      this.ambulanceRequests = data.map((e: any) => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        };
+      });
+    });
   }
 
-  closeModal() {
-    this.isModalOpen = false;
-  }
+  updateRequest(request: any) {
+    const dataToUpdate = {
+      description: request.description,
+      emergencyType: request.emergencyType,
+      location: request.location,
+      severity: request.severity,
+      additionalNotes: request.additionalNotes // nuevo campo para notas adicionales
+    };
 
-  onSubmit() {
-    this.authService.register(this.user.email, this.user.password, this.user)
-      .subscribe(
-        () => {
-          console.log('Usuario registrado exitosamente');
-          this.router.navigate(['/bienvenida']); 
-          this.closeModal();
-        },
-        (error) => {
-          console.error('Error al registrar al usuario:', error);
-          alert('Error al registrar al usuario. Por favor, intenta nuevamente.');
-        }
-      );
+    this.firebaseService.updateAmbulanceRequest(request.id, dataToUpdate)
+      .then(() => {
+        alert("Datos actualizados correctamente");
+      })
+      .catch(error => {
+        console.error("Error al actualizar:", error);
+      });
   }
 }

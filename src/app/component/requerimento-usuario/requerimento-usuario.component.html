@@ -1,80 +1,41 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solicitud de Ambulancia</title>
-  <link rel="stylesheet" href="requerimento-usuario.component.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-          <h1>Red de Hospitales</h1>
-          <ul class="menu">
-            <button onclick="volver()">Inicio</button>
-          </ul>
-        </nav>
-    </header>
-
-  <div class="form-container">
+<div class="modal" *ngIf="isModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
     <h2>Solicitud de Ambulancia</h2>
-    <form action="enviar_solicitud" method="POST">
-      <label for="tipo-emergencia">Tipo de Emergencia:</label>
-      <select id="tipo-emergencia" name="tipo-emergencia" required>
+    <form (ngSubmit)="onSubmit()">
+      
+      <!-- Tipo de Emergencia -->
+      <label for="emergencyType">Tipo de Emergencia:</label>
+      <select id="emergencyType" [(ngModel)]="request.emergencyType" name="emergencyType" required>
         <option value="" disabled selected>Seleccione...</option>
         <option value="accidente">Accidente</option>
         <option value="enfermedad">Enfermedad</option>
         <option value="otro">Otro</option>
       </select>
 
-      <label for="gravedad">Gravedad:</label>
-      <select id="gravedad" name="gravedad" required>
+      <!-- Gravedad -->
+      <label for="severity">Gravedad:</label>
+      <select id="severity" [(ngModel)]="request.severity" name="severity" required>
         <option value="" disabled selected>Seleccione...</option>
         <option value="leve">Leve</option>
         <option value="moderada">Moderada</option>
         <option value="grave">Grave</option>
       </select>
 
-      <label for="condicion">Condición del Paciente:</label>
-      <textarea id="condicion" name="condicion" rows="3" placeholder="Describa la condición del paciente" required></textarea>
+      <!-- Descripción del accidente -->
+      <label for="description">Descripción del Accidente:</label>
+      <textarea id="description" [(ngModel)]="request.description" name="description" placeholder="Describa la condición del paciente" rows="3" required></textarea>
 
-      <label for="ubicacion">Ubicación en Tiempo Real:</label>
-      <input type="text" id="ubicacion" name="ubicacion" placeholder="Esperando ubicación..." readonly required>
-      
+      <!-- Ubicación en tiempo real -->
+      <label for="location">Ubicación en Tiempo Real:</label>
+      <input type="text" id="location" [(ngModel)]="request.location" name="location" placeholder="Esperando ubicación..." readonly required>
+
       <!-- Mostrar ubicación en pantalla -->
-      <p id="mostrar-ubicacion" class="location-display">Ubicación: Latitud y Longitud no disponibles</p>
+      <p id="location-display" class="location-display">Ubicación: Latitud y Longitud no disponibles</p>
 
       <button type="submit">Enviar Solicitud</button>
     </form>
   </div>
+</div>
 
-  <script>
-    // Función para actualizar la ubicación en tiempo real
-    function actualizarUbicacion() {
-      if ("geolocation" in navigator) {
-        navigator.geolocation.watchPosition(
-          (position) => {
-            const lat = position.coords.latitude;
-            const lon = position.coords.longitude;
-            document.getElementById("ubicacion").value = `Latitud: ${lat}, Longitud: ${lon}`;
-            document.getElementById("mostrar-ubicacion").textContent = `Ubicación: Latitud ${lat}, Longitud ${lon}`;
-          },
-          (error) => {
-            alert("Error al obtener la ubicación: " + error.message);
-          },
-          {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 0
-          }
-        );
-      } else {
-        alert("La geolocalización no está disponible en este navegador.");
-      }
-    }
-
-    // Iniciar la actualización de la ubicación al cargar la página
-    window.onload = actualizarUbicacion;
-  </script>
-</body>
-</html>
+<button (click)="openModal()">Solicitar Ambulancia</button>
