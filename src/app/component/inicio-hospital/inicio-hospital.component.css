@@ -1,0 +1,157 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Barra superior */
+.barra-superior {
+    width: 100%;
+    background-color: #003366; /* Color 1 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc; /* Área para un icono */
+    border-radius: 50%;
+}
+
+.nav-botones {
+    display: flex;
+    gap: 15px;
+}
+
+.boton-nav {
+    font-size: 1.2em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton-nav:hover {
+    text-decoration: underline;
+}
+
+/* Título de bienvenida */
+.area-bienvenida {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.area-bienvenida h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Área de contacto */
+.area-contacto {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-izquierda,
+.contacto-derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-izquierda h2, .contacto-derecha h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boton-agregar-ambulancia {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.boton-agregar-paramedico {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+/* Área de noticias */
+.area-noticias {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.area-noticias h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.noticia {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noticia img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.noticia .info-noticia {
+    flex: 1;
+}
+
+.noticia h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.boton-ver-mas {
+    padding: 5px 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
