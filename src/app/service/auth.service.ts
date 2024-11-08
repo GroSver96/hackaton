@@ -4,6 +4,9 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -58,4 +61,6 @@ export class AuthService {
     // Usamos 'add' para agregar un hospital a la colección de Firestore
     return from(this.firestore.collection('hospitals').add(hospital));
   }
+  
 }
+
