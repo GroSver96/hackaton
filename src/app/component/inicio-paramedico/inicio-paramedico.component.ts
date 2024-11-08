@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
-import { getAuth, signOut } from 'firebase/auth';
 
 @Component({
-  selector: 'app-inicio-hospital',
-  templateUrl: './inicio-hospital.component.html',
-  styleUrl: './inicio-hospital.component.css'
+  selector: 'app-inicio-paramedico',
+  templateUrl: './inicio-paramedico.component.html',
+  styleUrl: './inicio-paramedico.component.css'
 })
-export class InicioHospitalComponent {
-
+export class InicioParamedicoComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
-  onLogout(){
+  logout(){
     this.authService.logout()
     this.router.navigate(['/login']); 
   }

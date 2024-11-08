@@ -17,6 +17,7 @@ import { RequerimentoParamedicoComponent } from './component/requerimento-parame
 import { InicioHospitalComponent } from './component/inicio-hospital/inicio-hospital.component';
 import { RegistroHospitalComponent } from './component/registro-hospital/registro-hospital.component'; 
 import { from } from 'rxjs';
+import { InicioParamedicoComponent } from './component/inicio-paramedico/inicio-paramedico.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,13 @@ import { from } from 'rxjs';
     RequerimentoUsuarioComponent,
     RequerimentoParamedicoComponent,
     InicioHospitalComponent,
+<<<<<<< HEAD
     RegistroHospitalComponent
+=======
+    RegistroHospitalComponent,
+    HospitalComponent,
+    InicioParamedicoComponent,
+>>>>>>> d4ac282d4b44564e939bfa7df5ea04bc190f9013
   ],
   imports: [
     BrowserModule,
