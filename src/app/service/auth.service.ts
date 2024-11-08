@@ -59,19 +59,12 @@ export class AuthService {
   registerHospital(hospital: any): Observable<any> {
     return from(this.firestore.collection('hospitals').add(hospital));
   }
-<<<<<<< HEAD
+
     // Método para solicitar una ambulancia
     requestAmbulance(requestData: any): Observable<any> {
       // Usamos 'add' para agregar la solicitud de ambulancia a la colección de Firestore
       return from(this.firestore.collection('ambulanceRequests').add(requestData));
     }
 
-  
-  
+
 }
-
-
-
-=======
-}
->>>>>>> d4ac282d4b44564e939bfa7df5ea04bc190f9013

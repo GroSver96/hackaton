@@ -30,13 +30,9 @@ import { InicioParamedicoComponent } from './component/inicio-paramedico/inicio-
     RequerimentoUsuarioComponent,
     RequerimentoParamedicoComponent,
     InicioHospitalComponent,
-<<<<<<< HEAD
-    RegistroHospitalComponent
-=======
     RegistroHospitalComponent,
-    HospitalComponent,
     InicioParamedicoComponent,
->>>>>>> d4ac282d4b44564e939bfa7df5ea04bc190f9013
+
   ],
   imports: [
     BrowserModule,
