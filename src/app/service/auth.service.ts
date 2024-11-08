@@ -26,17 +26,16 @@ export class AuthService {
 
   // Método para cerrar sesión
   logout() {
+    
     return this.afAuth.signOut();
   }
 
   // Método para registrar un nuevo usuario
   register(email: string, password: string, userData: any): Observable<any> {
-    // Utilizamos 'from' para convertir la promesa en un observable
     return from(
       this.afAuth
         .createUserWithEmailAndPassword(email, password)
         .then((credential) => {
-          // Después de registrar al usuario en Firebase Auth, lo agregamos a Firestore
           return this.firestore
             .collection('users')
             .doc(credential.user?.uid)
@@ -55,7 +54,6 @@ export class AuthService {
 
   // Método para registrar un nuevo hospital
   registerHospital(hospital: any): Observable<any> {
-    // Usamos 'add' para agregar un hospital a la colección de Firestore
     return from(this.firestore.collection('hospitals').add(hospital));
   }
 }
