@@ -1,0 +1,108 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #003366, #0066cc);
+}
+
+/* Contenedor de inicio de sesión */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #003366;
+}
+
+/* Encabezado */
+h2 {
+    color: #003366;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Estilo de las etiquetas */
+label {
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+/* Campos de entrada */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+input:focus {
+    background-color: #e0e0e0;
+    border-color: #003366;
+    outline: none;
+}
+
+/* Botón de Iniciar Sesión */
+button[type="submit"] {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #cc5200;
+}
+
+/* Botón de Registrar Nuevo */
+.btn-register {
+    background-color: #0066cc;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #005bb5;
+}
+
+/* Mensaje de error */
+.error {
+    color: #ff6600;
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: center;
+}
