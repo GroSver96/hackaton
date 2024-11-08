@@ -14,8 +14,8 @@ body {
     background: linear-gradient(135deg, #003366, #0066cc);
 }
 
+/* Contenedor de inicio de sesión */
 .login-container {
-    
     width: 100%;
     max-width: 400px;
     padding: 20px;
@@ -25,12 +25,13 @@ body {
     text-align: center;
 }
 
+/* Título */
 h2 {
     margin-bottom: 20px;
     color: #003366;
 }
 
-/* Estilo de las etiquetas y campos de entrada */
+/* Etiquetas y campos de entrada */
 label {
     font-weight: bold;
     color: #003366;
@@ -75,7 +76,7 @@ input[type="password"]:focus {
     background-color: #0066cc;
 }
 
-/* Botón de Registrar Nuevo */
+/* Botón de Registrar Nuevo
 .btn-register {
     background-color: #ff6600;
     color: white;
@@ -86,11 +87,12 @@ input[type="password"]:focus {
     font-weight: bold;
     width: 100%;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 .btn-register:hover {
     background-color: #cc5500;
-}
+} */
 
 /* Mensaje de error */
 .error {
@@ -98,4 +100,16 @@ input[type="password"]:focus {
     font-size: 0.9em;
     margin-top: 10px;
     text-align: center;
+}
+
+/* Contenedor de app-register */
+.register-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    color: #003366;
+    font-weight: bold;
 }

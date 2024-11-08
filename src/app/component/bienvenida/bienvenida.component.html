@@ -1,7 +1,12 @@
-<p>bienvenida works!</p>
-<button (click)="logout()">Logout</button>
-<h1>Bienvenido a la Aplicación</h1>
-<p>¿Necesita una ambulacia?</p>
-<button routerLink="/requerimento-usuario">Contactar</button>
-<button routerLink="/perfil">perfil</button>
-<button routerLink="/hospitales">Hospitales</button>  
+<body>
+<div class="bienvenida-container">
+    <button class="logout-button" (click)="logout()">Logout</button>
+    <h1>Bienvenido a la Aplicación</h1>
+    <p>¿Necesita una ambulancia?</p>
+    <div class="button-group">
+        <button class="action-button" routerLink="/requerimento-usuario">Contactar</button>
+        <button class="action-button" routerLink="/perfil">Perfil</button>
+        <button class="action-button" routerLink="/hospitales">Hospitales</button>
+    </div>
+</div>
+</body>
